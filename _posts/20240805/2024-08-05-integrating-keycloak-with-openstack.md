@@ -288,7 +288,7 @@ Relevant authentication endpoints
 
 Here, _keycloak_saml_ and _saml2_ refer to the identity provider and federation protocol you've created in the previous step.
 
-```apacheconf
+```conf
 LoadModule mod_shib /usr/lib/apache2/modules/mod_shib.so
 
 ProxyPass "/identity" "unix:/var/run/uwsgi/keystone-wsgi-public.socket|uwsgi://uwsgi-uds-keystone-wsgi-public" retry=0 acquire=1
