@@ -131,18 +131,18 @@ A single Keycloak server supports multiple realms. Each realm has its own users,
 
 You can use any name for your realm, but keep in mind the IdP Entity ID will contain this name. For example if you choose OpenStack as your realm name, the Entity ID will become:
 
-[https://auth.localhost:8443/realms/OpenStack](https://auth.localhost:8443/realms/OpenStack)
+**https://auth.localhost:8443/realms/OpenStack**
 
 You can verify your Entity ID by going to _Realm Settings_ and accessing the _SAML 2.0 Identity Provider Metadata_ under _Endpoints_ in the _General_ settings.
 
 Applications that want to use KeyCloak for authentication must be registered in the system as a client. We, therefore, create a new client for our Keystone instance. Select _Clients_ from the sidebar and click _Create Client_.
 
-The type must be set to SAML, and the Client ID must match the Keystone Entity ID. You can freely choose a (globally) unique Entity ID as long as you later configure Keystone to use that same ID. Here we'll use "[http://192.168.81.11](http://192.168.81.11)". The name of client can be chosen freely.
+The type must be set to SAML, and the Client ID must match the Keystone Entity ID. You can freely choose a (globally) unique Entity ID as long as you later configure Keystone to use that same ID. Here we'll use "**http://192.168.81.11**". The name of client can be chosen freely.
 
 Once created, open the client and make sure the following settings are set:
 
 - Valid redirect URIs  
-    [http://192.168.81.11/Shibboleth.sso/SAML2/POST](http://192.168.81.11/Shibboleth.sso/SAML2/POST)
+    **http://192.168.81.11/Shibboleth.sso/SAML2/POST**
 - Force nameID Format
 - Client Signature Required:
 	- off

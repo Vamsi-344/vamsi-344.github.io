@@ -25,7 +25,7 @@ We want to integrate keystone with keycloak for federated identity, so we are go
 
 Our endgoal is this: 
 ![saml2 websso keystone](saml2_websso_keystone.png)
-This diagram shows a standard [WebSSO](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.Web%20Browser%20SSO%20Profile|outline) authentication flow, not one involving keystone. WebSSO is one of a few [SAML2.0 profiles](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.Major%20Profiles%20and%20Federation%20Use%20Cases|outline). It is based on the idea that a web browser will be acting as an intermediary and so the flow involves concepts that a browser can understand and act on, like HTTP redirects and HTML forms.
+This diagram shows a standard **WebSSO** authentication flow, not one involving keystone. WebSSO is one of a few **SAML2.0 profiles**. It is based on the idea that a web browser will be acting as an intermediary and so the flow involves concepts that a browser can understand and act on, like HTTP redirects and HTML forms.
 
 First, the user uses their web browser to request some secure resource from the Service Provider. The Service Provider detects that the user isn’t authenticated yet, so it generates a SAML Request which it base64 encodes, and then issues an HTTP redirect to the Identity Provider.
 
