@@ -276,7 +276,7 @@ Install and enable the shib Apache module
 
 Then, change your Apache configuration to require valid authentication when accessing the following endpoints:
 
-```
+```conf
 /identity/v3/OS-FEDERATION/identity_providers/keycloak_saml/protocols/saml2/auth
 
 /identity/v3/auth/OS-FEDERATION/websso/saml2
@@ -288,7 +288,7 @@ Relevant authentication endpoints
 
 Here, _keycloak_saml_ and _saml2_ refer to the identity provider and federation protocol you've created in the previous step.
 
-```
+```conf
 LoadModule mod_shib /usr/lib/apache2/modules/mod_shib.so
 
 ProxyPass "/identity" "unix:/var/run/uwsgi/keystone-wsgi-public.socket|uwsgi://uwsgi-uds-keystone-wsgi-public" retry=0 acquire=1
