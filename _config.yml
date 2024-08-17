@@ -117,7 +117,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
+    repo: Vamsi-344/vamsi-344.github.io # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
